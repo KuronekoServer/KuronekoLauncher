@@ -191,7 +191,7 @@ loginButton.addEventListener('click', () => {
 
     AuthManager.addMojangAccount(loginUsername.value, loginPassword.value).then((value) => {
         updateSelectedAccount(value)
-        loginButton.innerHTML = loginButton.innerHTML.replace(Lang.queryJS('login.loggingIn'), Lang.queryJS('login.success'))
+        loginButton.innerHTML = loginButton.innerHTML.replace(Lang.queryJS('login.loggingIn'), Lang.queryJS('ログイン成功'))
         $('.circle-loader').toggleClass('load-complete')
         $('.checkmark').toggle()
         setTimeout(() => {
@@ -217,14 +217,14 @@ loginButton.addEventListener('click', () => {
 
         let actualDisplayableError
         if(isDisplayableError(displayableError)) {
-            msftLoginLogger.error('Error while logging in.', displayableError)
+            msftLoginLogger.error('ログイン時にエラーが発生しました。', displayableError)
             actualDisplayableError = displayableError
         } else {
             // Uh oh.
-            msftLoginLogger.error('Unhandled error during login.', displayableError)
+            msftLoginLogger.error('ログイン中にUnhandledエラーが発生しました。', displayableError)
             actualDisplayableError = {
-                title: 'Unknown Error During Login',
-                desc: 'An unknown error has occurred. Please see the console for details.'
+                title: 'ログイン時の不明なエラー',
+                desc: '不明なエラーが発生しました。詳しくはコンソールをご覧ください。'
             }
         }
 

@@ -348,14 +348,14 @@ ipcRenderer.on(MSFT_OPCODE.REPLY_LOGIN, (_, ...arguments_) => {
 
             if(arguments_[1] === MSFT_ERROR.NOT_FINISHED) {
                 // User cancelled.
-                msftLoginLogger.info('Login cancelled by user.')
+                msftLoginLogger.info('ユーザーによってログインがキャンセルされました。')
                 return
             }
 
             // Unexpected error.
             setOverlayContent(
                 'Something Went Wrong',
-                'Microsoft authentication failed. Please try again.',
+                'Microsoft認証に失敗しました。もう一度やり直してください。',
                 'OK'
             )
             setOverlayHandler(() => {
@@ -372,7 +372,7 @@ ipcRenderer.on(MSFT_OPCODE.REPLY_LOGIN, (_, ...arguments_) => {
             switchView(getCurrentView(), viewOnClose, 500, 500, () => {
                 // TODO Dont know what these errors are. Just show them I guess.
                 // This is probably if you messed up the app registration with Azure.
-                console.log('Error getting authCode, is Azure application registered correctly?')
+                console.log('AuthCodeの取得エラー、Azureアプリケーションは正しく登録されていますか？')
                 console.log(error)
                 console.log(error_description)
                 console.log('Full query map', queryMap)
@@ -391,7 +391,7 @@ ipcRenderer.on(MSFT_OPCODE.REPLY_LOGIN, (_, ...arguments_) => {
             })
         } else {
 
-            msftLoginLogger.info('Acquired authCode, proceeding with authentication.')
+            msftLoginLogger.info('authCode を取得したため、認証を行う。')
 
             const authCode = queryMap.code
             AuthManager.addMicrosoftAccount(authCode).then(value => {
@@ -404,14 +404,14 @@ ipcRenderer.on(MSFT_OPCODE.REPLY_LOGIN, (_, ...arguments_) => {
 
                     let actualDisplayableError
                     if(isDisplayableError(displayableError)) {
-                        msftLoginLogger.error('Error while logging in.', displayableError)
+                        msftLoginLogger.error('ログイン時にエラーが発生しました。', displayableError)
                         actualDisplayableError = displayableError
                     } else {
                         // Uh oh.
-                        msftLoginLogger.error('Unhandled error during login.', displayableError)
+                        msftLoginLogger.error('ログイン中にUnhandledエラーが発生しました。', displayableError)
                         actualDisplayableError = {
-                            title: 'Unknown Error During Login',
-                            desc: 'An unknown error has occurred. Please see the console for details.'
+                            title: 'ログイン時の不明なエラー',
+                            desc: '不明なエラーが発生しました。詳しくはコンソールをご覧ください。'
                         }
                     }
 
