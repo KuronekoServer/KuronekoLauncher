@@ -1,13 +1,13 @@
 {
-  "name": "helioslauncher",
+  "name": "kuronekolauncher",
   "version": "1.9.0",
-  "productName": "Helios Launcher",
+  "productName": "kuroneko Launcher",
   "description": "Modded Minecraft Launcher",
-  "author": "Daniel Scalzi (https://github.com/dscalzi/)",
+  "author": "kuroneko6423 (https://github.com/kuroneko6423/)",
   "license": "UNLICENSED",
-  "homepage": "https://github.com/dscalzi/HeliosLauncher",
+  "homepage": "https://github.com/KuronekoServer/KuronekoLauncher",
   "bugs": {
-    "url": "https://github.com/dscalzi/HeliosLauncher/issues"
+    "url": "https://github.com/KuronekoServer/KuronekoLauncher/issues"
   },
   "private": true,
   "main": "index.js",
