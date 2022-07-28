@@ -1,35 +1,36 @@
-# Microsoft Authentication
+# マイクロソフトの認証
 
-Authenticating with Microsoft is fully supported by Kuroneko Launcher.
+Kuroneko Launcherは、Microsoftによる認証に完全対応しています。
 
 ## Acquiring an Azure Client ID
 
-1. Navigate to https://portal.azure.com
-2. In the search bar, search for **Azure Active Directory**.
-3. In Azure Active Directory, go to **App Registrations** on the left pane (Under *Manage*).
-4. Click **New Registration**.
-    - Set **Name** to be your launcher's name.
-    - Set **Supported account types** to *Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)*
-    - Leave **Redirect URI** blank.
-    - Register the application.
-5. You should be on the application's management page. If not, Navigate back to **App Registrations**. Select the application you just registered.
-6. Click **Authentication** on the left pane (Under *Manage*).
-7. Click **Add Platform**.
-    - Select **Mobile and desktop applications**.
-    - Choose `https://login.microsoftonline.com/common/oauth2/nativeclient` as the **Redirect URI**.
-    - Select **Configure** to finish adding the platform.
-8. Navigate back to **Overview**.
-9. Copy **Application (client) ID**.
+1. https://portal.azure.com に移動します
+2. 検索バーで、**Azure Active Directory** と検索してください。
+3. Azure Active Directory の左ペインの **アプリの登録** (Under *Manage*) に移動します。
+4. 新規登録**をクリックします。
+    - 名前**をランチャーの名前に設定します。
+    - サポートされるアカウントの種類を、*任意の組織ディレクトリ（任意のAzure ADディレクトリ - Multitenant）および個人のMicrosoftアカウント（例：Skype、Xbox）*に設定します。
+    - **Redirect URI** は空白にしてください。
+    - アプリケーションを登録する。
+5. アプリケーションの管理ページが表示されているはずです。そうでない場合は、**アプリの登録** に戻ってください。先ほど登録したアプリケーションを選択します。
+6. 左ペインの**認証**をクリックします（*Manage*）。
+7. clickで **Add Platform**.
+    - *モバイルおよびデスクトップアプリケーション*を選択します。
+    - **リダイレクトURI**として `https://login.microsoftonline.com/common/oauth2/nativeclient` を選択します.
+    - **Configure** を選択し、プラットフォームの追加を完了します。
+8. **概要** に戻ります。
+9. コピー **アプリケーション (クライアント) ID**.
 
 
-Reference: https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app
+参考：https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app
 
 ## Adding the Azure Client ID to Kuroneko Launcher.
 
-In `app/assets/js/ipcconstants.js` you'll find **`AZURE_CLIENT_ID`**. Set it to your application's id.
+`app/assets/js/ipcconstants.js` の中に **`AZURE_CLIENT_ID`** があります。これを自分のアプリケーションのIDに設定します。
 
-Note: Azure Client ID is NOT a secret value and **can** be stored in git. Reference: https://stackoverflow.com/questions/57306964/are-azure-active-directorys-tenantid-and-clientid-considered-secrets
+注：Azure Client ID は秘密値ではなく、**git に保存することができます**。
+参考：https://stackoverflow.com/questions/57306964/are-azure-active-directorys-tenantid-and-clientid-considered-secrets
 
 ----
 
-You can now authenticate with Microsoft through the launcher.
+You can now authenticate with Microsoft through the ランチャーからマイクロソフトとの認証ができるようになりました。
