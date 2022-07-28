@@ -193,7 +193,7 @@ Microsoft認証の設定方法については、https://github.com/KuronekoServe
 
 開発者と連絡を取るには、Discordが最適です。
 
-[![discord](https://discordapp.com/api/guilds/211524927831015424/embed.png?style=banner3)][discord]
+[![discord](https://discordapp.com/api/guilds/867038364552396860/embed.png?style=banner3)][discord]
 
 ---
 
@@ -205,7 +205,7 @@ Microsoft認証の設定方法については、https://github.com/KuronekoServe
 [mainprocess]: https://electronjs.org/docs/tutorial/application-architecture#main-and-renderer-processes 'Main Process'
 [rendererprocess]: https://electronjs.org/docs/tutorial/application-architecture#main-and-renderer-processes 'Renderer Process'
 [chromedebugger]: https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome 'Debugger for Chrome'
-[discord]: https://discord.gg/zNWUXdt 'Discord'
+[discord]: https://discord.kuroneko6423.com 'Discord'
 [wiki]: https://github.com/KuronekoServer/KuronekoLauncher/wiki 'wiki'
-[nebula]: https://github.com/dscalzi/Nebula 'dscalzi/Nebula'
+[nebula]: https://github.com/KuronekoServer/Nebula 'dscalzi/Nebula'
 [v2branch]: https://github.com/KuronekoServer/KuronekoLauncher/tree/ts-refactor 'v2 branch'
