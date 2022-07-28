@@ -1,8 +1,8 @@
 # Distribution Index
 
-You can use [Nebula](https://github.com/dscalzi/Nebula) to automate the generation of a distribution index.
+[Nebula](https://github.com/KuronekoServer/Nebula)を使って、配布インデックスの生成を自動化することができます。
 
-The distribution index is written in JSON. The general format of the index is as posted below.
+配布用インデックスはJSONで記述されます。インデックスの一般的な書式は、以下に掲示するとおりです。
 
 ```json
 {
@@ -55,22 +55,22 @@ The distribution index is written in JSON. The general format of the index is as
 
 ### `DistroIndex.version: string/semver`
 
-The version of the index format. Will be used in the future to gracefully push updates.
+インデックスフォーマットのバージョン。将来的に、更新を優雅にプッシュするために使われるでしょう。
 
 ### `DistroIndex.discord: object`
 
-Global settings for [Discord Rich Presence](https://discordapp.com/developers/docs/rich-presence/how-to).
+[Discord Rich Presence](https://discordapp.com/developers/docs/rich-presence/how-to)のグローバル設定です。
 
 **Properties**
 
-* `discord.clientId: string` - Client ID for th Application registered with Discord.
-* `discord.smallImageText: string` - Tootltip for the `smallImageKey`.
-* `discord.smallImageKey: string` - Name of the uploaded image for the small profile artwork.
+* `discord.clientId: string` - Discordに登録されているアプリケーションのクライアントID。
+* `discord.smallImageText: string` - `smallImageKey` に対応するトゥートゥルトゥルです。
+* `discord.smallImageKey: string` - 小さなプロフィールアートワークのためにアップロードされた画像の名前です。
 
 
 ### `DistroIndex.rss: string/url`
 
-A URL to a RSS feed. Used for loading news.
+RSSフィードのURLです。ニュースの読み込みに使用します。
 
 ---
 
@@ -99,59 +99,59 @@ A URL to a RSS feed. Used for loading news.
 
 ### `Server.id: string`
 
-The ID of the server. The launcher saves mod configurations and selected servers by ID. If the ID changes, all data related to the old ID **will be wiped**.
+サーバーのIDです。ランチャーはMODの設定や選択したサーバーをIDで保存しています。IDが変更された場合、旧IDに関するデータは**全て消去されます**。
 
 ### `Server.name: string`
 
-The name of the server. This is what users see on the UI.
+サーバーの名前です。これは、ユーザーがUIで見るものです。
 
 ### `Server.description: string`
 
-A brief description of the server. Displayed on the UI to provide users more information.
+サーバーの簡単な説明。ユーザーに情報を提供するためにUIに表示される。
 
 ### `Server.icon: string/url`
 
-A URL to the server's icon. Will be displayed on the UI.
+サーバーのアイコンへのURL。UIに表示されます。
 
 ### `Server.version: string/semver`
 
-The version of the server configuration.
+サーバー設定のバージョン。
 
 ### `Server.address: string/url`
 
-The server's IP address.
+サーバーのIPアドレスです。
 
 ### `Server.minecraftVersion: string`
 
-The version of minecraft that the server is running.
+サーバーが動作しているminecraftのバージョン。
 
 ### `Server.discord: object`
 
-Server specific settings used for [Discord Rich Presence](https://discordapp.com/developers/docs/rich-presence/how-to).
+[Discord Rich Presence](https://discordapp.com/developers/docs/rich-presence/how-to)で使用するサーバー固有の設定です。
 
 **Properties**
 
-* `discord.shortId: string` - Short ID for the server. Displayed on the second status line as `Server: shortId`
-* `discord.largeImageText: string` - Ttooltip for the `largeImageKey`.
-* `discord.largeImageKey: string` - Name of the uploaded image for the large profile artwork.
+* `discord.shortId: string` - サーバーの短いID。ステータスの2行目に `Server: shortId` として表示される。
+* `discord.largeImageText: string` - `largeImageKey` に対応するツールチップです。
+* `discord.largeImageKey: string` - 大きなプロフィールアートワークのためにアップロードされた画像の名前です。
 
 ### `Server.mainServer: boolean`
 
-Only one server in the array should have the `mainServer` property enabled. This will tell the launcher that this is the default server to select if either the previously selected server is invalid, or there is no previously selected server. If this field is not defined by any server (avoid this), the first server will be selected as the default. If multiple servers have `mainServer` enabled, the first one the launcher finds will be the effective value. Servers which are not the default may omit this property rather than explicitly setting it to false.
+配列の中の1つのサーバーだけが `mainServer` プロパティを有効にする必要があります。これはランチャーに、前に選択したサーバーが無効であったり、前に選択したサーバーがない場合に、このサーバーがデフォルトで選択されることを知らせます。このフィールドがどのサーバーにも定義されていない場合(これを避ける)、最初のサーバーがデフォルトとして選択されます。複数のサーバーで `mainServer` が有効になっている場合、ランチャーが最初に見つけたサーバーが有効な値となります。デフォルトでないサーバーは、このプロパティを明示的に false に設定するのではなく、省略することができます。
 
 ### `Server.autoconnect: boolean`
 
-Whether or not the server can be autoconnected to. If false, the server will not be autoconnected to even when the user has the autoconnect setting enabled.
+サーバーへの自動接続が可能かどうか。falseの場合、ユーザーが自動接続の設定を有効にしていても、サーバーは自動接続されない。
 
 ### `Server.modules: Module[]`
 
-An array of module objects.
+モジュールオブジェクトの配列。
 
 ---
 
 ## Module Object
 
-A module is a generic representation of a file required to run the minecraft client.
+モジュールとは、minecraft クライアントの実行に必要なファイルの一般的な表現です。
 
 #### Example
 ```JSON
@@ -180,11 +180,11 @@ A module is a generic representation of a file required to run the minecraft cli
 }
 ```
 
-The parent module will be stored maven style, it's destination path will be resolved by its id. The sub module has a declared `path`, so that value will be used.
+親モジュールは maven スタイルで保存され、保存先のパスはその ID で解決されます。サブモジュールは `path` を宣言しているので、その値が使用されます。
 
 ### `Module.id: string`
 
-The ID of the module. All modules that are not of type `File` **MUST** use a maven identifier. Version information and other metadata is pulled from the identifier. Modules which are stored maven style use the identifier to resolve the destination path. If the `extension` is not provided, it defaults to `jar`.
+モジュールの ID です。タイプ `File` でないすべてのモジュールは、maven 識別子を使用しなければなりません。バージョン情報と他のメタデータは、識別子から取得されます。maven スタイルで保存されるモジュールは、識別子を使用して保存先パスを解決します。Extension` を指定しない場合、デフォルトは `jar` です。
 
 **Template**
 
@@ -198,23 +198,23 @@ The ID of the module. All modules that are not of type `File` **MUST** use a mav
 
 `net/minecraft/launchwrapper/1.12/launchwrapper-1.12.jar`
 
-If the module's artifact does not declare the `path` property, its path will be resolved from the ID.
+モジュールのアーティファクトが `path` プロパティを宣言していない場合、そのパスは ID から解決されます。
 
 ### `Module.name: string`
 
-The name of the module. Used on the UI.
+モジュールの名前です。UIで使用します。
 
 ### `Module.type: string`
 
-The type of the module.
+モジュールのタイプ。
 
 ### `Module.required: Required`
 
 **OPTIONAL**
 
-Defines whether or not the module is required. If omitted, then the module will be required. 
+モジュールが必須であるか否かを定義する。省略された場合、モジュールは必須となる。
 
-Only applicable for modules of type:
+タイプのモジュールにのみ適用される。
 * `ForgeMod`
 * `LiteMod`
 * `LiteLoader`
@@ -222,22 +222,22 @@ Only applicable for modules of type:
 
 ### `Module.artifact: Artifact`
 
-The download artifact for the module.
+モジュールのダウンロードアーティファクト。
 
 ### `Module.subModules: Module[]`
 
 **OPTIONAL**
 
-An array of sub modules declared by this module. Typically, files which require other files are declared as submodules. A quick example would be a mod, and the configuration file for that mod. Submodules can also declare submodules of their own. The file is parsed recursively, so there is no limit.
+このモジュールが宣言しているサブモジュールの配列。一般的に、他のファイルを必要とするファイルはサブモジュールとして宣言されます。簡単な例としては、MOD とその設定ファイルです。サブモジュールはまた、それ自身のサブモジュールを宣言することもできます。このファイルは再帰的に解析されるので、制限はありません。
 
 
 ## Artifact Object
 
-The format of the module's artifact depends on several things. The most important factor is where the file will be stored. If you are providing a simple file to be placed in the root directory of the client files, you may decided to format the module as the `examplefile` module declared above. This module provides a `path` option, allowing you to directly set where the file will be saved to. Only the `path` will affect the final downloaded file.
+モジュールのアーティファクトの形式は、いくつかの事柄に依存します。最も重要な要素は、そのファイルがどこに保存されるかです。もし、クライアントファイルのルートディレクトリに置かれる単純なファイルを提供するのであれば、上で宣言した `examplefile` モジュールのような形式にすることになるでしょう。このモジュールは `path` オプションを提供し、ファイルの保存先を直接設定することができます。最終的にダウンロードされるファイルには、 `path` だけが影響します。
 
-Other times, you may want to store the files maven-style, such as with libraries and mods. In this case you must declare the module as the example artifact above. The module `id` will be used to resolve the final path, effectively replacing the `path` property. It must be provided in maven format. More information on this is provided in the documentation for the `id` property.
+その他、ライブラリやMODなど、mavenスタイルでファイルを保存したい場合があります。この場合、上記のサンプルのアーティファクトのように、モジュールを宣言する必要があります。モジュールの `id` は最終的なパスを解決するために使用され、事実上 `path` プロパティを置き換えます。これは maven フォーマットで提供する必要があります。これに関する詳細な情報は、 `id` プロパティのドキュメントに記載されています。
 
-The resolved/provided paths are appended to a base path depending on the module's declared type.
+解決/提供されたパスは、モジュールの宣言型に応じて、ベースパスに追加されます。
 
 | Type | Path |
 | ---- | ---- |
@@ -248,27 +248,27 @@ The resolved/provided paths are appended to a base path depending on the module'
 | `LiteMod` | ({`commonDirectory`}/modstore/{`path` OR resolved}) |
 | `File` | ({`instanceDirectory`}/{`Server.id`}/{`path` OR resolved}) |
 
-The `commonDirectory` and `instanceDirectory` values are stored in the launcher's config.json.
+`commonDirectory` と `instanceDirectory` の値は、ランチャーの config.json に格納されています。
 
 ### `Artifact.size: number`
 
-The size of the artifact.
+人工物の大きさです。
 
 ### `Artifact.MD5: string`
 
-The MD5 hash of the artifact. This will be used to validate local artifacts.
+アーティファクトのMD5ハッシュ。これはローカルのアーティファクトを検証するために使用されます。
 
 ### `Artifact.path: string`
 
 **OPTIONAL**
 
-A relative path to where the file will be saved. This is appended to the base path for the module's declared type.
+ファイルが保存される場所への相対パス。これは、モジュールの宣言されたタイプのベースパスに追加される。
 
-If this is not specified, the path will be resolved based on the module's ID.
+これが指定されない場合、パスはモジュールの ID に基づいて解決される。
 
 ### `Artifact.url: string/url`
 
-The artifact's download url.
+アーティファクトのダウンロードURL。
 
 ## Required Object
 
@@ -276,13 +276,13 @@ The artifact's download url.
 
 **OPTIONAL**
 
-If the module is required. Defaults to true if this property is omited. 
+モジュールが必要な場合。このプロパティが省略された場合、デフォルトはtrueである。
 
 ### `Required.def: boolean`
 
 **OPTIONAL**
 
-If the module is enabled by default. Has no effect unless `Required.value` is false. Defaults to true if this property is omited. 
+モジュールがデフォルトで有効になっている場合。Required.value`がfalseでない限り、何の効果もありません。このプロパティが省略された場合、デフォルトはtrueになります。
 
 ---
 
@@ -290,10 +290,9 @@ If the module is enabled by default. Has no effect unless `Required.value` is fa
 
 ### ForgeHosted
 
-The module type `ForgeHosted` represents forge itself. Currently, the launcher only supports forge servers, as vanilla servers can be connected to via the mojang launcher. The `Hosted` part is key, this means that the forge module must declare its required libraries as submodules.
+モジュールタイプ `ForgeHosted` は forge 自体を表します。現在、ランチャーは forge サーバーのみをサポートしており、vanilla サーバーは mojang ランチャーから接続することができます。Hosted` の部分がキーポイントで、これは forge モジュールが必要なライブラリをサブモジュールとして宣言しなければならないことを意味します。
 
-Ex.
-
+例
 ```json
 {
     "id": "net.minecraftforge:forge:1.11.2-13.20.1.2429",
@@ -319,17 +318,17 @@ Ex.
 }
 ```
 
-All of forge's required libraries are declared in the `version.json` file found in the root of the forge jar file. These libraries MUST be hosted and declared a submodules or forge will not work.
+forge のすべての必要なライブラリは、forge jar ファイルのルートにある `version.json` ファイルで宣言されています。これらのライブラリーはホストされなければならず、サブモジュールとして宣言されなければなりません（MUST）。
 
-There were plans to add a `Forge` type, in which the required libraries would be resolved by the launcher and downloaded from forge's servers. The forge servers are down at times, however, so this plan was stopped half-implemented.
+必要なライブラリがランチャーによって解決され、forge のサーバーからダウンロードされるような `Forge` タイプを追加する計画がありました。しかし、forge サーバーは時々ダウンするので、この計画は中途半端なまま停止されました。
 
 ---
 
 ### LiteLoader
 
-The module type `LiteLoader` represents liteloader. It is handled as a library and added to the classpath at runtime. Special launch conditions are executed when liteloader is present and enabled. This module can be optional and toggled similarly to `ForgeMod` and `Litemod` modules.
+モジュールタイプ `LiteLoader` は liteloader を表す。これはライブラリとして扱われ、ランタイムにクラスパスに追加される。liteloader が存在し、有効になっていると、特別な起動条件が実行されます。このモジュールはオプションで、 `ForgeMod` や `Litemod` モジュールと同様にトグルすることができる。
 
-Ex.
+例
 ```json
 {
     "id": "com.mumfrey:liteloader:1.11.2",
@@ -354,9 +353,9 @@ Ex.
 
 ### Library
 
-The module type `Library` represents a library file which will be required to start the minecraft process. Each library module will be dynamically added to the `-cp` (classpath) argument while building the game process.
+モジュールタイプ `Library` は minecraft プロセスを開始するために必要なライブラリファイルを表します。各ライブラリモジュールは、ゲームプロセスを構築する際に `-cp` (クラスパス) 引数に動的に追加されます。
 
-Ex.
+例
 
 ```json
 {
@@ -375,9 +374,9 @@ Ex.
 
 ### ForgeMod
 
-The module type `ForgeMod` represents a mod loaded by the Forge Mod Loader (FML). These files are stored maven-style and passed to FML using forge's [Modlist format](https://github.com/MinecraftForge/FML/wiki/New-JSON-Modlist-format).
+モジュールタイプ `ForgeMod` は Forge Mod Loader (FML) によってロードされる mod を表します。これらのファイルは maven スタイルで保存され、forge の [Modlist format](https://github.com/MinecraftForge/FML/wiki/New-JSON-Modlist-format) を使って FML に渡されます。
 
-Ex.
+例
 ```json
 {
     "id": "com.westeroscraft:westerosblocks:3.0.0-beta-6-133",
@@ -395,9 +394,9 @@ Ex.
 
 ### LiteMod
 
-The module type `LiteMod` represents a mod loaded by liteloader. These files are stored maven-style and passed to liteloader using forge's [Modlist format](https://github.com/MinecraftForge/FML/wiki/New-JSON-Modlist-format). Documentation for liteloader's implementation of this can be found on [this issue](http://develop.liteloader.com/liteloader/LiteLoader/issues/34).
+モジュールタイプ `LiteMod` は liteloader によってロードされる mod を表します。これらのファイルは maven スタイルで保存され、forge の [Modlist format](https://github.com/MinecraftForge/FML/wiki/New-JSON-Modlist-format) を使って liteloader に渡されます。liteloader の実装に関するドキュメントは [this issue](http://develop.liteloader.com/liteloader/LiteLoader/issues/34) にあります。
 
-Ex.
+例
 ```json
 {
     "id": "com.mumfrey:macrokeybindmod:0.14.4-1.11.2@litemod",
@@ -419,9 +418,9 @@ Ex.
 
 ### File
 
-The module type `file` represents a generic file required by the client, another module, etc. These files are stored in the server's instance directory.
+モジュールタイプ `file` は、クライアントや他のモジュールなどが必要とする一般的なファイルを表します。これらのファイルはサーバのインスタンスディレクトリに格納される。
 
-Ex.
+例
 
 ```json
 {
