@@ -4,7 +4,7 @@
 
 <em><h5 align="center">(formerly Electron Launcher)</h5></em>
 
-[<p align="center"><img src="https://img.shields.io/github/workflow/status/dscalzi/HeliosLauncher/Build.svg?style=for-the-badge" alt="gh actions">](https://github.com/dscalzi/HeliosLauncher/actions) [<img src="https://img.shields.io/github/downloads/dscalzi/HeliosLauncher/total.svg?style=for-the-badge" alt="downloads">](https://github.com/dscalzi/HeliosLauncher/releases) <img src="https://forthebadge.com/images/badges/winter-is-coming.svg"  height="28px" alt="winter-is-coming"></p>
+[<p align="center"><img src="https://img.shields.io/github/workflow/status/KuronekoServer/KuronekoLauncher/Build.svg?style=for-the-badge" alt="gh actions">](https://github.com/KuronekoServer/KuronekoLauncher/actions) [<img src="https://img.shields.io/github/downloads/KuronekoServer/KuronekoLauncher/total.svg?style=for-the-badge" alt="downloads">](https://github.com/KuronekoServer/KuronekoLauncher/releases) <img src="https://forthebadge.com/images/badges/winter-is-coming.svg"  height="28px" alt="winter-is-coming"></p>
 
 <p align="center">Join modded servers without worrying about installing Java, Forge, or other mods. We'll handle that for you.</p>
 
@@ -13,25 +13,25 @@
 
 ## Features
 
-* 🔒 Full account management.
-  * Add multiple accounts and easily switch between them.
-  * Microsoft (OAuth 2.0) + Mojang (Yggdrasil) authentication fully supported.
-  * Credentials are never stored and transmitted directly to Mojang.
-* 📂 Efficient asset management.
-  * Receive client updates as soon as we release them.
-  * Files are validated before launch. Corrupt or incorrect files will be redownloaded.
+* 🔒 完全なアカウント管理。
+  * 複数のアカウントを追加し、簡単に切り替えることができます。
+  * Microsoft (OAuth 2.0) + Mojang (Yggdrasil) 認証を完全にサポートします。
+  * 認証情報は保存されず、Mojangに直接送信されます。
+* 📂 効率的な資産管理
+  * クライアントのアップデートが公開され次第、受け取ることができます。
+  * ファイルは、起動前に検証されます。破損したファイルや不正なファイルは再ダウンロードされます。
 * ☕ **Automatic Java validation.**
-  * If you have an incompatible version of Java installed, we'll install the right one *for you*.
-  * You do not need to have Java installed to run the launcher.
-* 📰 News feed natively built into the launcher.
-* ⚙️ Intuitive settings management, including a Java control panel.
-* Supports all of our servers.
-  * Switch between server configurations with ease.
-  * View the player count of the selected server.
-* Automatic updates. That's right, the launcher updates itself.
-*  View the status of Mojang's services.
+  * 互換性のないバージョンのJavaがインストールされている場合は、正しいものをインストールします *for you*.
+  * ランチャーの実行には、Javaがインストールされている必要はありません。
+* 📰 ランチャーにネイティブに組み込まれたニュースフィード。
+* ⚙️ Javaコントロールパネルなど、直感的な設定管理が可能です。
+* 全サーバーに対応。
+  * サーバー構成の切り替えが簡単にできます。
+  * 選択したサーバーのプレイヤー数を表示します。
+* 自動アップデート。そうです、ランチャーが勝手にアップデートしてくれるのです。
+*  Mojangのサービス状況を見ることができます。
 
-This is not an exhaustive list. Download and install the launcher to gauge all it can do!
+これは完全なリストではありません。ランチャーをダウンロードしてインストールし、できることをすべて試してみてください。
 
 #### Need Help? [Check the wiki.][wiki]
 
@@ -39,18 +39,18 @@ This is not an exhaustive list. Download and install the launcher to gauge all i
 
 ## Downloads
 
-You can download from [GitHub Releases](https://github.com/dscalzi/HeliosLauncher/releases)
+You can download from [GitHub Releases](https://github.com/KuronekoServer/KuronekoLauncher/releases)
 
 #### Latest Release
 
-[![](https://img.shields.io/github/release/dscalzi/HeliosLauncher.svg?style=flat-square)](https://github.com/dscalzi/HeliosLauncher/releases/latest)
+[![](https://img.shields.io/github/release/KuronekoServer/KuronekoLauncher.svg?style=flat-square)](https://github.com/KuronekoServer/KuronekoLauncher/releases/latest)
 
 #### Latest Pre-Release
-[![](https://img.shields.io/github/release/dscalzi/HeliosLauncher/all.svg?style=flat-square)](https://github.com/dscalzi/HeliosLauncher/releases)
+[![](https://img.shields.io/github/release/KuronekoServer/KuronekoLauncher/all.svg?style=flat-square)](https://github.com/KuronekoServer/KuronekoLauncher/releases)
 
 **Supported Platforms**
 
-If you download from the [Releases](https://github.com/dscalzi/HeliosLauncher/releases) tab, select the installer for your system.
+[リリース](https://github.com/KuronekoServer/KuronekoLauncher/releases) タブからダウンロードする場合は、お使いのシステムに対応したインストーラーを選択してください。
 
 | Platform | File |
 | -------- | ---- |
@@ -61,24 +61,24 @@ If you download from the [Releases](https://github.com/dscalzi/HeliosLauncher/re
 
 ## Console
 
-To open the console, use the following keybind.
+コンソールを開くには、以下のキーバインドを使用します。
 
 ```console
 ctrl + shift + i
 ```
 
-Ensure that you have the console tab selected. Do not paste anything into the console unless you are 100% sure of what it will do. Pasting the wrong thing can expose sensitive information.
+コンソールタブが選択されていることを確認します。コンソールに何かを貼り付ける場合は、その内容が100%確実でない限り、貼り付けないでください。間違ったものを貼り付けると、機密情報が漏れる可能性があります。
 
 #### Export Output to a File
 
-If you want to export the console output, simply right click anywhere on the console and click **Save as..**
+コンソール出力をエクスポートしたい場合は、コンソール上の任意の場所を右クリックし、**Save as.**をクリックするだけです。
 
 ![console example](https://i.imgur.com/T5e73jP.png)
 
 
 ## Development
 
-This section details the setup of a basic developmentment environment.
+ここでは、基本的な開発環境のセットアップについて説明します。
 
 ### Getting Started
 
@@ -91,7 +91,7 @@ This section details the setup of a basic developmentment environment.
 **Clone and Install Dependencies**
 
 ```console
-> git clone https://github.com/dscalzi/HeliosLauncher.git
+> git clone https://github.com/KuronekoServer/KuronekoLauncher.git
 > cd HeliosLauncher
 > npm install
 ```
@@ -108,13 +108,13 @@ This section details the setup of a basic developmentment environment.
 
 **Build Installers**
 
-To build for your current platform.
+現在のプラットフォームに合わせて構築すること。
 
 ```console
 > npm run dist
 ```
 
-Build for a specific platform.
+特定のプラットフォーム向けに構築する。
 
 | Platform    | Command              |
 | ----------- | -------------------- |
@@ -122,15 +122,15 @@ Build for a specific platform.
 | macOS       | `npm run dist:mac`   |
 | Linux x64   | `npm run dist:linux` |
 
-Builds for macOS may not work on Windows/Linux and vice-versa.
+macOS用のビルドはWindows/Linuxでは動作しない場合があり、その逆も同様です。
 
 ---
 
 ### Visual Studio Code
 
-All development of the launcher should be done using [Visual Studio Code][vscode].
+ランチャーの開発は、すべて [Visual Studio Code][vscode].
 
-Paste the following into `.vscode/launch.json`
+以下を `.vscode/launch.json` に貼り付けます。
 
 ```JSON
 {
@@ -163,25 +163,25 @@ Paste the following into `.vscode/launch.json`
 }
 ```
 
-This adds two debug configurations.
+これにより、2つのデバッグコンフィギュレーションが追加されます。
 
 #### Debug Main Process
 
-This allows you to debug Electron's [main process][mainprocess]. You can debug scripts in the [renderer process][rendererprocess] by opening the DevTools Window.
+これにより、Electronの[main process][mainprocess]をデバッグすることができます。DevTools Windowを開くと、[renderer process][rendererprocess]のスクリプトをデバッグすることができます。
 
 #### Debug Renderer Process
 
-This allows you to debug Electron's [renderer process][rendererprocess]. This requires you to install the [Debugger for Chrome][chromedebugger] extension.
+これにより、Electronの[renderer process][rendererprocess]をデバッグすることができます。そのためには、[Debugger for Chrome][chromedebugger]という拡張機能をインストールする必要があります。
 
-Note that you **cannot** open the DevTools window while using this debug configuration. Chromium only allows one debugger, opening another will crash the program.
+このデバッグ設定を使用している間は、DevTools ウィンドウを開くことができないことに注意してください。Chromium は1つのデバッガしか許さないので、他のデバッガを開くとプログラムがクラッシュします。
 
 ---
 
 ### Note on Third-Party Usage
 
-Please give credit to the original author and provide a link to the original source. This is free software, please do at least this much.
+原作者のクレジットを表示し、原作者へのリンクを提供してください。これはフリーソフトです、最低限これだけはお願いします。
 
-For instructions on setting up Microsoft Authentication, see https://github.com/dscalzi/HeliosLauncher/blob/master/docs/MicrosoftAuth.md.
+Microsoft認証の設定方法については、https://github.com/KuronekoServer/KuronekoLauncher/blob/master/docs/MicrosoftAuth.md を参照してください。
 
 ---
 
@@ -191,7 +191,7 @@ For instructions on setting up Microsoft Authentication, see https://github.com/
 * [Nebula (Create Distribution.json)][nebula]
 * [v2 Rewrite Branch (Inactive)][v2branch]
 
-The best way to contact the developers is on Discord.
+開発者と連絡を取るには、Discordが最適です。
 
 [![discord](https://discordapp.com/api/guilds/211524927831015424/embed.png?style=banner3)][discord]
 
@@ -206,6 +206,6 @@ The best way to contact the developers is on Discord.
 [rendererprocess]: https://electronjs.org/docs/tutorial/application-architecture#main-and-renderer-processes 'Renderer Process'
 [chromedebugger]: https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome 'Debugger for Chrome'
 [discord]: https://discord.gg/zNWUXdt 'Discord'
-[wiki]: https://github.com/dscalzi/HeliosLauncher/wiki 'wiki'
+[wiki]: https://github.com/KuronekoServer/KuronekoLauncher/wiki 'wiki'
 [nebula]: https://github.com/dscalzi/Nebula 'dscalzi/Nebula'
-[v2branch]: https://github.com/dscalzi/HeliosLauncher/tree/ts-refactor 'v2 branch'
+[v2branch]: https://github.com/KuronekoServer/KuronekoLauncher/tree/ts-refactor 'v2 branch'
